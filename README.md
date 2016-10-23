@@ -13,6 +13,7 @@ This project is **Java web application** based on REST using some frameworks lik
 Clone the repository: $ git clone https://github.com/phatn/question4.git
 
 #Build and run application
+**This project is tested with Java 8, not with older versions yet**
 ```
 $ cd question4
 $ mvn clean install
