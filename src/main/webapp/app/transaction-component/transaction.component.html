@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Search Transaction</div>
+		<div class="panel-body">
+			<form class="form-horizontal">
+			  <fieldset>
+			    <legend>Transaction</legend>
+			    <div class="form-group">
+			    	<div class="col-lg-2"><button (click)="searchByHighestValue()" type="button" class="btn btn-primary">Search Highest Value</button></div>
+			    	
+			      <label for="select" class="col-lg-1 control-label">Year</label>
+			      <div class="col-lg-2">
+			        <select class="form-control" id="select" #selectYear>
+			        	<option value="0" selected="selected">- Select year -</option>
+			          	<option value="{{year}}" *ngFor="let year of years let i = index">{{year}}</option>
+			        </select>
+			      </div>
+			      <div class="col-lg-2"><button (click)="searchByYear(selectYear.value)" type="button" class="btn btn-primary">Search</button></div>
+			      
+			      <div class="col-lg-2"><button (click)="searchByCity('Beijing')" type="button" class="btn btn-primary">Average Value in Beijing</button></div>
+			      <div class="col-lg-3"><input *ngIf="averageValue" class="form-control" id="disabledInput" type="text" placeholder="" disabled="" value={{averageValue}}></div>
+			    </div>
+			  </fieldset>
+			</form>
+			
+			<table class="table table-bordered table-striped" *ngIf="transactionResults">
+				<thead>
+			      <tr>
+			        <th>No.</th>
+			        <th>Trade ID</th>
+			        <th>Timestamp</th>
+			        <th>Value</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    	<tr *ngFor="let transactionResult of transactionResults; let i = index">
+			    		<td>{{i + 1}}</td>
+			    		<td>{{transactionResult.traderId}}</td>
+			    		<td>{{transactionResult.timestamp}}</td>
+			    		<td>{{transactionResult.value}}</td>
+			    	</tr> 
+			    </tbody>
+			</table>
+		</div>
+	</div>
+</div>
