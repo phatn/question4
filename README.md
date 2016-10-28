@@ -19,4 +19,4 @@ $ cd question4
 $ mvn clean install
 $ mvn jetty:run
 ```
-When Jetty server get started then access it at **http://localhost:8080/index.html**
+When Jetty server get started then access it at **http://localhost:8080**
