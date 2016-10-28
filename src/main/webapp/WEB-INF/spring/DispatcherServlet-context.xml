@@ -16,9 +16,6 @@
 	<mvc:annotation-driven />
 	<context:component-scan	base-package="com.pocketmath.trading.api" />
 	
-	<mvc:resources location="/static/" mapping="/static/**"/>
-	<mvc:resources location="/app/" mapping="/app/**"/>
-	<mvc:resources location="/node_modules/" mapping="/node_modules/**"/>
-	<mvc:resources location="/" mapping="index.html"/>
+	<mvc:default-servlet-handler />
 	
 </beans>

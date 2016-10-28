@@ -17,3 +17,5 @@ target/
 
 #Scala
 .cache-main
+
+.externalToolBuilders/

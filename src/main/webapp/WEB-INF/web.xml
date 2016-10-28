@@ -3,7 +3,10 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	
-	<!-- /WEB-INF/spring/application-context.xml -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
 	<!-- Spring configuration files -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -12,9 +15,6 @@
 		</param-value>
 	</context-param>
 	
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
 	
 	<!-- Bootstrap Spring container -->
 	<listener>
